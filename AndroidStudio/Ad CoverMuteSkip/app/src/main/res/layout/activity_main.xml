@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.brainrotdecantation.adcovermuteskip.BuildConfig" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/serviceStatusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Service status"
+                android:textSize="18sp"
+                android:layout_marginBottom="14dp"/>
+
+            <TextView
+                android:id="@+id/memoryUseTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Memory use"
+                android:textSize="12sp"
+                android:layout_marginBottom="14dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The accessibility service powering the app must be manually enabled/disabled in the Accessibility Settings.\nOnce it is enabled, it will run all the time without the need to open the app.\n\nAs it requires screen monitoring, screen overlay and touch actions, Android requires 'Restricted Settings' to allow the accessibility service to run."
+                android:layout_marginBottom="14dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step 1: Request 'Restricted Settings' by trying to activate the greyed out 'Ad CoverMuteSkip'\nAccessibility > Installed applications > Ad CoverMuteSkip > Try to enable"
+                android:layout_marginBottom="14dp"/>
+
+            <Button
+                android:id="@+id/buttonOpenAccessibilitySettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open Accessibility Settings"
+                android:layout_marginBottom="14dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step 2: In the app settings menu, activate the 'Restricted Settings'.\nUsually, the 3-dot button is in the TOP-RIGHT corner and only appears after Step 1.\nApp settings > Ad CoverMuteSkip > 3-dot button > Enable restricted settings"
+                android:layout_marginBottom="14dp"/>
+
+            <Button
+                android:id="@+id/buttonOpenAppSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open App Settings"
+                android:layout_marginBottom="14dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Step 3: Go back to the Accessibility Settings (step 1), you can now enable the Accessibility Service.\nAccessibility > Installed applications > Ad CoverMuteSkip > Enable"
+                android:layout_marginBottom="14dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textSize="20sp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="start"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Overlay opacity (default: 250)"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="start"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="14dp">
+
+                <SeekBar
+                    android:id="@+id/seekBarOpacity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="255"
+                    android:min="0"
+                    android:progress="200" />
+
+                <TextView
+                    android:id="@+id/tvOpacityValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="245"
+                    android:textSize="16sp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="0dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Monitor Volume Up"
+                    android:textSize="16sp"/>
+
+                <Switch
+                    android:id="@+id/switchMonitorVolumeUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumbTextPadding="12dp"
+                    android:textOn="Enabled"
+                    android:textOff="Disabled" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="If enabled, press the Volume Up button to copy the active app's DOM tree to the clipboard (this is used to design new blocking rules)"
+                android:textSize="14sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:layout_marginBottom="14dp"/>
+
+            <TextView
+                android:id="@+id/tvAppVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`Version ` + BuildConfig.VERSION_NAME + (BuildConfig.DEBUG ? ` Debug` : ``)}"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

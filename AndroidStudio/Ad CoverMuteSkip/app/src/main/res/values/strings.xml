@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Ad CoverMuteSkip</string>
+    <string name="accessibility_service_description">This service monitors the currently visible app layout to add an overlay when appropriate.</string>
+</resources>
