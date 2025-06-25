@@ -20,7 +20,7 @@ The goal of this project is to provide a system that decreases the toxicity of a
 
 ## What it looks like
 
-### [Check this video demo]([https://github.com/echoesofcreation/adCoverMuteSkip/blob/f4d7c24be25f73d15c12324a0773e2335f75823d/assets/Ad%20CoverMuteSkipVideoDemo.mp4](https://github.com/echoesofcreation/adCoverMuteSkip/blob/d7b0d84a709583ac0ec5a96c970f9cfd84dbf0ba/assets/Ad%20CoverMuteSkip_VideoDemo.mp4)) That demo shows Youtube sound auto-muting and moving the floating player above a covered ad.
+### [Check this video demo](https://github.com/echoesofcreation/adCoverMuteSkip/blob/d7b0d84a709583ac0ec5a96c970f9cfd84dbf0ba/assets/Ad%20CoverMuteSkip_VideoDemo.mp4) That demo shows Youtube sound auto-muting and moving the floating player above a covered ad.
 
 ![3 screenshots](https://github.com/echoesofcreation/adCoverMuteSkip/blob/d7b0d84a709583ac0ec5a96c970f9cfd84dbf0ba/assets/AppYoutubeScreenshot.png)
 
